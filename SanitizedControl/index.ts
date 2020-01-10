@@ -4,6 +4,8 @@ import sanitize = require("sanitize-html");
 
 export class SanitizedControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
+    private divElement: HTMLDivElement = document.createElement("div");
+
 	/**
 	 * Empty constructor.
 	 */
@@ -23,7 +25,8 @@ export class SanitizedControl implements ComponentFramework.StandardControl<IInp
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 	{
         // Add control initialization code
-	}
+        this.divElement.innerHTML = sanitize(context.parameters.htmlInput.raw || "");
+	}   
 
 
 	/**
