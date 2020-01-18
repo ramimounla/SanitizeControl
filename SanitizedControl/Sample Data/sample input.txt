@@ -1,0 +1,5 @@
+<h1>A Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="alert('Hello')">Dodgy button</button>
+<a href="https://google.com">Good link</a>
+<a href=javascript:alert('issue')>Dodgy link</a>
