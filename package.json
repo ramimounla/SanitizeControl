@@ -14,6 +14,7 @@
     "sanitize-html": "^1.20.1"
   },
   "devDependencies": {
+    "@types/sanitize-html": "^1.20.2",
     "pcf-scripts": "^1",
     "pcf-start": "^1"
   }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
 var sanitizeHtml = require('sanitize-html')
 
@@ -5,6 +6,15 @@ export class SanitizedControl implements ComponentFramework.StandardControl<IInp
 
 	private _sanitisedHtml: HTMLDivElement = document.createElement("div");
 	private _pureHtml: HTMLDivElement = document.createElement("div");
+=======
+import {IInputs, IOutputs} from "./generated/ManifestTypes";
+import "sanitize-html";
+import sanitize = require("sanitize-html");
+
+export class SanitizedControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
+
+    private divElement: HTMLDivElement = document.createElement("div");
+>>>>>>> e1a3b2f56670b651a331485e10b2802d0cc4ef50
 
 	/**
 	 * Empty constructor.
