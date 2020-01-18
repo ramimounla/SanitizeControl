@@ -2,7 +2,9 @@
 <manifest>
   <control namespace="XrmEnterprise" constructor="SanitizedControl" version="0.0.1" display-name-key="SanitizedControl" description-key="SanitizedControl description" control-type="standard">
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+
+    <!-- TODO update to access SingleLine.TextArea as well -->
+    <property name="htmlInput" display-name-key="HTML Input" description-key="HTML formatted content to be sanitised" of-type="Multiple" usage="bound" required="true" />
     <!-- 
       Property node's of-type attribute can be of-type-group attribute. 
       Example:

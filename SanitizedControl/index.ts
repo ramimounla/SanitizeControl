@@ -1,4 +1,5 @@
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
+var sanitizeHtml = require('sanitize-html')
 
 export class SanitizedControl implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -21,6 +22,7 @@ export class SanitizedControl implements ComponentFramework.StandardControl<IInp
 	public init(context: ComponentFramework.Context<IInputs>, notifyOutputChanged: () => void, state: ComponentFramework.Dictionary, container:HTMLDivElement)
 	{
 		// Add control initialization code
+		sanitizeHtml(context.parameters.htmlInput.raw || "");
 	}
 
 
